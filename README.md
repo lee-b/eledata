@@ -2,7 +2,7 @@
 
 The `eledata` file format is a highly structured, elegant, and extensible data format, designed to be regular, readable, easily parsible, and to support arbitrary plugins.
 
-In essence, it is an abstract AST file format.
+In essence, it is a tree of abstract nodes, where each node is a type that your code defines.  The file format has JUST enough strucuture to support this, and no more.
 
 The main purpose of `eledata` is to provide a strong, stable, elegant base on which to build `eledown`, a lightweight markup format.  However, eledata itself may also be useful as a general data file format, similar to json: especially for those who prefer dynamic, extensible, plugin-based trees of objects, rather than raw dictionaries or primitives.
 
@@ -24,32 +24,8 @@ That's it.  That's the syntax of an `eledata` file!
 
 # Examples
 
-Here is an example of `eledata` file (which might give some hints as to where I'm going with `eledown`, later):
+See examples/first.eld for an example of an `eledata` file (which might give some hints as to where I'm going with `eledown`, later):
 
-{document
-  {title My Document}
-  {author John Doe}
-  {date 2023-03-15}
-  {section
-    {title Introduction}
-    {paragraph This is the introduction to my document.}
-    {section
-      {title Background}
-      {paragraph This is some background information.}
-    }
-  }
-  {section
-    {title Main Content}
-    {paragraph Here is some main content.}
-    {section
-      {title Subsection}
-      {paragraph This is a subsection.}
-      {command name arguments}
-      {filter name arguments}
-      {image name /path/to/image.jpg}
-    }
-  }
-}
 
 This example file includes metadata about a document, as well as the document itself, including several sections with different types of content, such as paragraphs and images. Note that the tags used in this example document are just examples and do not represent any built-in tags or plugins in the "eledown" format.
 
