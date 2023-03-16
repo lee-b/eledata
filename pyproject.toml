@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "eledata"
+version = "0.1.0"
+description = "A much more elegant lightweight markup language, with simple, regular syntax"
+authors = ["Lee Braiden <leebraid@gmail.com>"]
+readme = "README.md"
+packages = [ { include="eledata", from="src" } ]
+
+[tool.poetry.scripts]
+eledata = "eledata.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
